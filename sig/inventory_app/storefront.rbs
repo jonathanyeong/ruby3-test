@@ -3,7 +3,12 @@ module InventoryApp
     attr_accessor location: String
     attr_accessor name: String
     attr_accessor owner: String
+    attr_accessor items: Hash[Integer,Item]
 
-    def initialize: (type: String, name: String, cost: Float) -> void
+    def initialize: (location: String, name: String, owner: String, template_store: Symbol) -> void
+
+    def purchase_item: (Integer) -> Item
+
+    def populate_store: (Symbol) -> void
   end
 end
