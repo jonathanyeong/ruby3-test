@@ -1,0 +1,9 @@
+module InventoryApp
+  class Item
+    attr_accessor type: String
+    attr_accessor name: String
+    attr_accessor cost: Float
+
+    def initialize: (type: String, name: String, cost: Float) -> void
+  end
+end

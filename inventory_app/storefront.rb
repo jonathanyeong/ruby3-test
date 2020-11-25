@@ -16,7 +16,6 @@ module InventoryApp
     end
 
     def purchase_item(item_id)
-      raise InventoryApp::StorefrontException.new("Don't have enough items to reduce. Current count: #{count}") if count - number < 0
       item = @items.delete(item_id)
       raise InventoryApp::StorefrontException.new("Invalid id: #{item_id}") if item.nil?
       item
